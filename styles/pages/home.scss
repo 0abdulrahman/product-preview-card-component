@@ -1,0 +1,202 @@
+@use "../variables/colors" as *;
+@use "../variables/media" as *;
+@use "../variables/font" as *;
+@use "../helpers/mixins.scss" as *;
+
+$border_radius: 30px;
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: calc(100% - 76px);
+  @include media("s-mobile") {
+    height: auto;
+  }
+  @include center();
+  section {
+    border-radius: $border_radius;
+    overflow: hidden;
+    box-shadow: 0 20px 50px $shadow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media("s-mobile") {
+      flex-direction: column;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .result,
+    .summary {
+      padding: 40px 50px;
+      align-self: stretch;
+      @include media("s-mobile") {
+        padding: 30px 40px;
+      }
+    }
+    .result {
+      background: $bg_gradient;
+      border-radius: $border_radius;
+      @include media("s-mobile") {
+        border-radius: 0 0 $border_radius $border_radius;
+      }
+      color: $white;
+      text-align: center;
+      @include center;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font: {
+          size: $font_size + 5;
+          weight: 600;
+        }
+        margin-bottom: 10px;
+        color: $light_lavender;
+      }
+      .circle {
+        background: $cl_gradient;
+        width: 180px;
+        height: 180px;
+        @include center;
+        flex-direction: column;
+        border-radius: 50%;
+        p {
+          font: {
+            size: $font_size + 50;
+            weight: 700;
+          }
+        }
+        span {
+          font-size: $font_size - 1;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      h2 {
+        font-size: $font_size + 13;
+      }
+      > p {
+        color: $light_lavender;
+        font-size: $font_size;
+        max-width: 250px;
+        @include media("s-mobile") {
+          max-width: 300px;
+        }
+      }
+    }
+    .summary {
+      @include center;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        align-self: flex-start;
+        color: $dark_gray_blue;
+      }
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        font: {
+          size: $font_size;
+          weight: 700;
+        }
+        .tab {
+          padding: 15px;
+          color: $dark_gray_blue;
+          border-radius: 10px;
+          width: 310px;
+          display: flex;
+          justify-content: space-between;
+          &:nth-child(1) {
+            background-color: $red_bg;
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: $red;
+            }
+            .score {
+              color: hsla(224, 30%, 27%, 0.6);
+              span {
+                color: $dark_gray_blue;
+              }
+            }
+          }
+          &:nth-child(2) {
+            background-color: $orangey_yellow_bg;
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: $orangey_yellow;
+            }
+            .score {
+              color: hsla(224, 30%, 27%, 0.6);
+              span {
+                color: $dark_gray_blue;
+              }
+            }
+          }
+          &:nth-child(3) {
+            background-color: $green_teal_bg;
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: $green_teal;
+            }
+            .score {
+              color: hsla(224, 30%, 27%, 0.6);
+              span {
+                color: $dark_gray_blue;
+              }
+            }
+          }
+          &:nth-child(4) {
+            background-color: $coblat_blue_bg;
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: $coblat_blue;
+            }
+            .score {
+              color: hsla(224, 30%, 27%, 0.6);
+              span {
+                color: $dark_gray_blue;
+              }
+            }
+          }
+        }
+      }
+      button {
+        background: $dark_gray_blue;
+        color: $white;
+        font: {
+          family: inherit;
+          size: $font_size;
+          weight: 600;
+        }
+        border-radius: $border_radius;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 15px 5px;
+        &:hover {
+          background: $bg_gradient;
+        }
+      }
+    }
+  }
+}
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+footer a {
+  color: $off_blue;
+}
