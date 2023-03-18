@@ -56,6 +56,7 @@ main section figure {
 @media only screen and (max-width: 690px) {
   main section figure {
     flex-direction: column;
+    max-width: 395px;
   }
 }
 main section figure img {

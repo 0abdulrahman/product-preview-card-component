@@ -37,6 +37,7 @@ main {
       display: flex;
       @include media("s-mobile") {
         flex-direction: column;
+        max-width: 395px;
       }
       img {
         height: 507px;
