@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -19,6 +20,7 @@ ul {
 
 body {
   height: 100vh;
+  background-color: hsl(30, 38%, 92%);
 }
 
 main {
@@ -27,192 +29,123 @@ main {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 690px) {
   main {
     height: auto;
   }
 }
+@media only screen and (max-width: 690px) {
+  main {
+    padding: 15px;
+  }
+}
 main section {
-  border-radius: 30px;
+  background-color: #fff;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(16, 49, 182, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  max-width: 686px;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 690px) {
   main section {
+    border-radius: 10px;
+  }
+}
+main section figure {
+  display: flex;
+}
+@media only screen and (max-width: 690px) {
+  main section figure {
     flex-direction: column;
-    border-radius: 0;
-    box-shadow: none;
   }
 }
-main section .result,
-main section .summary {
-  padding: 40px 50px;
-  align-self: stretch;
+main section figure img {
+  height: 507px;
 }
-@media only screen and (max-width: 550px) {
-  main section .result,
-  main section .summary {
-    padding: 30px 40px;
+@media only screen and (max-width: 690px) {
+  main section figure img {
+    display: none;
   }
 }
-main section .result {
-  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  border-radius: 30px;
-  color: #fff;
-  text-align: center;
+main section figure .mobile-img img {
+  display: none;
+}
+@media only screen and (max-width: 690px) {
+  main section figure .mobile-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    width: auto\9 ;
+  }
+}
+main section figure figcaption {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 20px;
-}
-@media only screen and (max-width: 550px) {
-  main section .result {
-    border-radius: 0 0 30px 30px;
-  }
-}
-main section .result h1 {
-  font-size: 23px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: hsl(241, 100%, 89%);
-}
-main section .result .circle {
-  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
-  width: 180px;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 50%;
-}
-main section .result .circle p {
-  font-size: 68px;
-  font-weight: 700;
-}
-main section .result .circle span {
-  font-size: 17px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.4);
-}
-main section .result h2 {
-  font-size: 31px;
-}
-main section .result > p {
-  color: hsl(241, 100%, 89%);
-  font-size: 18px;
-  max-width: 250px;
-}
-@media only screen and (max-width: 550px) {
-  main section .result > p {
-    max-width: 300px;
-  }
-}
-main section .summary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 40px;
   gap: 30px;
 }
-main section .summary h2 {
-  align-self: flex-start;
-  color: hsl(224, 30%, 27%);
+@media only screen and (max-width: 690px) {
+  main section figure figcaption {
+    padding: 25px;
+    gap: 20px;
+  }
 }
-main section .summary .tabs {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 15px;
-  font-size: 18px;
+main section figure figcaption h2 {
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+main section figure figcaption h1 {
+  font-size: 36px;
   font-weight: 700;
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  color: hsl(212, 21%, 14%);
 }
-main section .summary .tabs .tab {
-  padding: 15px;
-  color: hsl(224, 30%, 27%);
+@media only screen and (max-width: 690px) {
+  main section figure figcaption h1 {
+    font-size: 32px;
+  }
+}
+main section figure figcaption p {
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+}
+main section figure figcaption .price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+}
+main section figure figcaption .price span {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+main section figure figcaption button {
   border-radius: 10px;
-  width: 310px;
-  display: flex;
-  justify-content: space-between;
-}
-main section .summary .tabs .tab:nth-child(1) {
-  background-color: #fff6f5;
-}
-main section .summary .tabs .tab:nth-child(1) .title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: hsl(0, 100%, 67%);
-}
-main section .summary .tabs .tab:nth-child(1) .score {
-  color: hsla(224, 30%, 27%, 0.6);
-}
-main section .summary .tabs .tab:nth-child(1) .score span {
-  color: hsl(224, 30%, 27%);
-}
-main section .summary .tabs .tab:nth-child(2) {
-  background-color: #fffbf2;
-}
-main section .summary .tabs .tab:nth-child(2) .title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: hsl(39, 100%, 56%);
-}
-main section .summary .tabs .tab:nth-child(2) .score {
-  color: hsla(224, 30%, 27%, 0.6);
-}
-main section .summary .tabs .tab:nth-child(2) .score span {
-  color: hsl(224, 30%, 27%);
-}
-main section .summary .tabs .tab:nth-child(3) {
-  background-color: #f2fafa;
-}
-main section .summary .tabs .tab:nth-child(3) .title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: hsl(166, 100%, 37%);
-}
-main section .summary .tabs .tab:nth-child(3) .score {
-  color: hsla(224, 30%, 27%, 0.6);
-}
-main section .summary .tabs .tab:nth-child(3) .score span {
-  color: hsl(224, 30%, 27%);
-}
-main section .summary .tabs .tab:nth-child(4) {
-  background-color: #f3f3fd;
-}
-main section .summary .tabs .tab:nth-child(4) .title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: hsl(234, 85%, 45%);
-}
-main section .summary .tabs .tab:nth-child(4) .score {
-  color: hsla(224, 30%, 27%, 0.6);
-}
-main section .summary .tabs .tab:nth-child(4) .score span {
-  color: hsl(224, 30%, 27%);
-}
-main section .summary button {
-  background: hsl(224, 30%, 27%);
-  color: #fff;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 30px;
   border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: #fff;
+  padding: 15px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
-  width: 100%;
-  padding: 15px 5px;
 }
-main section .summary button:hover {
-  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+main section figure figcaption button i {
+  margin-right: 10px;
+}
+main section figure figcaption button:hover {
+  background-color: #1a4031;
 }
 
 footer {
@@ -220,8 +153,9 @@ footer {
   text-align: center;
   padding: 20px;
   width: 100%;
+  font-weight: 500;
 }
 
 footer a {
-  color: #3e52a3;
+  color: hsl(158, 36%, 37%);
 }/*# sourceMappingURL=main.css.map */
