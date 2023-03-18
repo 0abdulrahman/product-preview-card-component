@@ -1,0 +1,146 @@
+@use "../variables/colors" as *;
+@use "../variables/media" as *;
+@use "../variables/font" as *;
+@use "../helpers/mixins.scss" as *;
+
+$border_radius: 30px;
+
+body {
+  height: 100vh;
+  background-color: $cream;
+}
+
+main {
+  height: calc(100% - 76px);
+  @include media("s-mobile") {
+    height: auto;
+  }
+  @include center();
+  @include media("s-mobile") {
+    padding: 15px;
+  }
+  section {
+    background-color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 686px;
+    @include media("s-mobile") {
+      border-radius: 10px;
+    }
+    figure {
+      display: flex;
+      @include media("s-mobile") {
+        flex-direction: column;
+        max-width: 395px;
+      }
+      > img {
+        height: 507px;
+        @include media("s-mobile") {
+          display: none;
+        }
+      }
+      .mobile-img {
+        img {
+          display: none;
+          @include media("s-mobile") {
+            display: block;
+            width: 100%;
+            height: auto;
+            width: auto\9;
+          }
+        }
+      }
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        gap: 30px;
+        @include media("s-mobile") {
+          padding: 25px;
+          gap: 20px;
+        }
+        h2 {
+          text-transform: uppercase;
+          color: $dark_grayish_blue;
+          letter-spacing: 5px;
+          font: {
+            size: $font_size;
+            weight: 500;
+          }
+        }
+        h1 {
+          font: {
+            size: $font_size + 22;
+            weight: 700;
+            family: $sec_font;
+          }
+          line-height: 1;
+          color: $very_dark_blue;
+          @include media("s-mobile") {
+            font-size: $font-size + 18;
+          }
+        }
+        p {
+          font: {
+            size: $font_size + 1;
+            weight: 500;
+          }
+          color: $dark_grayish_blue;
+          line-height: 1.5;
+        }
+        .price {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          font: {
+            size: $font_size + 20;
+            weight: 700;
+            family: $sec_font;
+          }
+          color: $dark_cyan;
+          span {
+            font: {
+              size: $font_size;
+              weight: 500;
+              family: $font;
+            }
+            color: $dark_grayish_blue;
+            text-decoration: line-through;
+          }
+        }
+        button {
+          @include center;
+          border-radius: 10px;
+          border: none;
+          background-color: $dark_cyan;
+          color: $white;
+          padding: 15px 20px;
+          font: {
+            family: $font;
+            weight: 600;
+            size: $font_size;
+          }
+          cursor: pointer;
+          img {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+          }
+          &:hover {
+            background-color: $btn_hover;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-weight: 500;
+}
+footer a {
+  color: $dark_cyan;
+}
