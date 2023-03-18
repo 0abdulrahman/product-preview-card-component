@@ -59,11 +59,11 @@ main section figure {
     max-width: 395px;
   }
 }
-main section figure img {
+main section figure > img {
   height: 507px;
 }
 @media only screen and (max-width: 690px) {
-  main section figure img {
+  main section figure > img {
     display: none;
   }
 }
@@ -132,6 +132,9 @@ main section figure figcaption .price span {
   text-decoration: line-through;
 }
 main section figure figcaption button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   border: none;
   background-color: hsl(158, 36%, 37%);
@@ -139,10 +142,12 @@ main section figure figcaption button {
   padding: 15px 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
-main section figure figcaption button i {
+main section figure figcaption button img {
+  width: 15px;
+  height: 15px;
   margin-right: 10px;
 }
 main section figure figcaption button:hover {

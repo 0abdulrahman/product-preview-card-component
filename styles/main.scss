@@ -39,7 +39,7 @@ main {
         flex-direction: column;
         max-width: 395px;
       }
-      img {
+      > img {
         height: 507px;
         @include media("s-mobile") {
           display: none;
@@ -115,6 +115,7 @@ main {
           }
         }
         button {
+          @include center;
           border-radius: 10px;
           border: none;
           background-color: $dark_cyan;
@@ -123,10 +124,12 @@ main {
           font: {
             family: $font;
             weight: 600;
-            size: $font_size + 2;
+            size: $font_size;
           }
           cursor: pointer;
-          i {
+          img {
+            width: 15px;
+            height: 15px;
             margin-right: 10px;
           }
           &:hover {
